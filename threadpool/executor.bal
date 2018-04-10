@@ -57,7 +57,7 @@ function executeBenchmarks(functionRecord[] functionArray, int warmupIterations,
     foreach key, value in functionArray {
 
         var temp = value;
-        time:Time warmupstartTime = time:nanoTime();
+        time:Time warmupstartTime = time:currentTime();
         int i = 0;
 
         while (i < warmupIterations) {
@@ -66,7 +66,7 @@ function executeBenchmarks(functionRecord[] functionArray, int warmupIterations,
             f();
         }
 
-        time:Time startTime = time:nanoTime();
+        time:Time startTime = time:currentTime();
 
         i = 0;
 
@@ -78,7 +78,7 @@ function executeBenchmarks(functionRecord[] functionArray, int warmupIterations,
             f();
         }
 
-        time:Time endTime = time:nanoTime();
+        time:Time endTime = time:currentTime();
 
         resultWrite = check charChannel.writeCharacters("\n" + value.functionName + ",", 0);
 

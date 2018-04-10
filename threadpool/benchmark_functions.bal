@@ -2,7 +2,7 @@ package threadpool;
 
 import ballerina.io;
 
-unctionRecord[] functionArray = [];
+functionRecord[] functionArray = [];
 
 public function getTypeBenchmarkArray() returns (functionRecord[]) {
 
