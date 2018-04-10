@@ -3,7 +3,7 @@ package threadpool;
 import ballerina/io;
 import ballerina/time;
 import ballerina/file;
-import balleirna/math;
+import ballerina/math;
 
 public type functionRecord {
             string functionName;
@@ -108,8 +108,8 @@ public function getTypeBenchmarkArray() returns (functionRecord[]) {
                     {functionName:"benchmarkWorkloadType2", f:benchmarkWorkLoad2},
                     {functionName:"benchmarkWorkloadType3", f:benchmarkWorkLoad3},
                     {functionName:"benchmarkWorkloadType4", f:benchmarkWorkLoad4},
-                    {functionName:"benchmarkWokkloadType5", f:benchmarkWorkload5},
-                    {functionName:"benchmarkWorkloadTYpe6", f:benchmarkWorkload6}
+                    {functionName:"benchmarkWokkloadType5", f:benchmarkWorkLoad5},
+                    {functionName:"benchmarkWorkloadTYpe6", f:benchmarkWorkLoad6}
                     ];
 
     return functionArray;
@@ -121,7 +121,7 @@ public function benchmarkWorkLoad1() {
     float k = 1;
     float p = 10000000;
     float alpha = 2;
-    int i = math.round(inverseTransform(k, p, alpha, math:random()));
+    int i = math:round(inverseTransform(k, p, alpha, math:random()));
     while (i < 0)
     {
         i++;

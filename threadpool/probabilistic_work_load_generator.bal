@@ -80,7 +80,7 @@ function cdf (float k, float p, float alpha, float x) returns (float) {
 // u = cdf(x)
 // where k<=x<=p and alpha >0
 // return x
-function inverseTransform (float k, float p, float alpha, float U) returns (float) {
+public function inverseTransform (float k, float p, float alpha, float U) returns (float) {
     if (alpha > 0 && k > 0 && p > 0) {
         return math:pow((-U*math:pow(p,alpha)+ U*math:pow(k,alpha) + math:pow(p,alpha))/(math:pow(p,alpha)*math:pow(k,alpha)), -1/alpha);
     }
