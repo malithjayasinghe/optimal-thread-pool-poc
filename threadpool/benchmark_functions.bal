@@ -31,22 +31,4 @@ public function benchmarkWorkLoad1() {
     }
 }
 
-public function benchmarkWorkLoad1() {
-
-
-}
-
-public function benchmarkWorkLoad2() {
-
-
-
-}
-
-public function benchmarkWorkLoad3() {
-
-
-
-}
-
-
 
