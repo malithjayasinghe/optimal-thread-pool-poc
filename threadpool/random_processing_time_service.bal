@@ -1,4 +1,4 @@
-package threadpool;
+
 
 import ballerina/io;
 import ballerina/time;
@@ -58,13 +58,8 @@ function checkRange (float k, float p, float alpha, float x) returns (boolean) {
 }
 
 
-@Description {value:"Attributes associated with the service endpoint is defined here."}
-endpoint http:Listener serviceEP {
-    port:9090
-};
-
 @Description {value:"By default Ballerina assumes that the service is to be exposed via HTTP/1.1."}
-service<http:Service> hello bind serviceEP {
+service<http:Service> random  {
     @Description {value:"All resources are invoked with arguments of server connector and request"}
     sayHello (endpoint conn, http:Request req) {
         http:Response res = new;

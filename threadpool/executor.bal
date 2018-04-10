@@ -164,8 +164,7 @@ public function getTypeBenchmarkArray() returns (functionRecord[]) {
                     {functionName:"benchmarkWorkloadType2", f:benchmarkWorkLoad2},
                     {functionName:"benchmarkWorkloadType3", f:benchmarkWorkLoad3},
                     {functionName:"benchmarkWorkloadType4", f:benchmarkWorkLoad4},
-                    {functionName:"benchmarkWokkloadType5", f:benchmarkWorkLoad5},
-                    {functionName:"benchmarkWorkloadTYpe6", f:benchmarkWorkLoad6}
+                    {functionName:"benchmarkWokkloadType5", f:benchmarkWorkLoad5}
                     ];
 
     return functionArray;
@@ -174,11 +173,12 @@ public function getTypeBenchmarkArray() returns (functionRecord[]) {
 
 public function benchmarkWorkLoad1() {
 
-    float k = 1;
+    float k = 1000;
     float p = 10000000;
     float alpha = 2;
-    int i = math:round(inverseTransform(k, p, alpha, math:random()));
-    while (i < 0)
+    int lastCount = math:round(inverseTransform(k, p, alpha, math:random()));
+    int i = 0;
+    while (i < lastCount)
     {
         i++;
     }
@@ -186,32 +186,61 @@ public function benchmarkWorkLoad1() {
 
 public function benchmarkWorkLoad2() {
 
+    float k = 1000;
+    float p = 10000000;
+    float alpha = 2;
+    int lastCount = math:round(inverseTransform(k, p, alpha, math:random()));
+    int i = 0;
+    while (i < lastCount)
+    {
+        i++;
+    }
+
 
 }
 
 public function benchmarkWorkLoad3() {
 
-
+    float k = 1000;
+    float p = 10000000;
+    float alpha = 1.5;
+    int lastCount = math:round(inverseTransform(k, p, alpha, math:random()));
+    int i = 0;
+    while (i < lastCount)
+    {
+        i++;
+    }
 
 }
 
 public function benchmarkWorkLoad4() {
 
-
+    float k = 1000;
+    float p = 10000000;
+    float alpha = 0.8;
+    int lastCount = math:round(inverseTransform(k, p, alpha, math:random()));
+    int i = 0;
+    while (i < lastCount)
+    {
+        i++;
+    }
 
 }
 
 public function benchmarkWorkLoad5() {
 
-
+    float k = 1000;
+    float p = 10000000;
+    float alpha = 0.4;
+    int lastCount = math:round(inverseTransform(k, p, alpha, math:random()));
+    int i = 0;
+    while (i < lastCount)
+    {
+        i++;
+    }
 
 }
 
-public function benchmarkWorkLoad6() {
-
-
-
-}
 
 
 
