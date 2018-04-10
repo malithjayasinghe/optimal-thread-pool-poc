@@ -73,3 +73,4 @@ service<http:Service> hello bind serviceEP {
         // Sends the response back to the client.
         _ = conn -> respond(res);
     }
+}
