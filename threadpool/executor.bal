@@ -3,6 +3,7 @@ package threadpool;
 import ballerina/io;
 import ballerina/time;
 import ballerina/file;
+import balleirna/math;
 
 public type functionRecord {
             string functionName;
@@ -127,13 +128,7 @@ public function benchmarkWorkLoad1() {
     }
 }
 
-public function benchmarkWorkLoad1() {
-
-
-}
-
 public function benchmarkWorkLoad2() {
-
 
 
 }
@@ -143,5 +138,25 @@ public function benchmarkWorkLoad3() {
 
 
 }
+
+public function benchmarkWorkLoad4() {
+
+
+
+}
+
+public function benchmarkWorkLoad5() {
+
+
+
+}
+
+public function benchmarkWorkLoad6() {
+
+
+
+}
+
+
 
 
