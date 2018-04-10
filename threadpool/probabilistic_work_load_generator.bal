@@ -1,4 +1,7 @@
 
+
+package threadpool;
+
 import ballerina/io;
 import ballerina/math;
 
@@ -41,15 +44,6 @@ function setup()
 
 }
 
-public function main (string[] args)
-{
-
-   float k = 1;
-   float  p = 10000000; 
-   float alpha = 2;
-   io:println(inverseTransform(k,p,alpha,math:random()));
-
-}
 
 
 // Probability density function
