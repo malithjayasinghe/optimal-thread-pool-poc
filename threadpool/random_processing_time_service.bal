@@ -58,14 +58,24 @@ function checkRange (float k, float p, float alpha, float x) returns (boolean) {
 }
 
 
+ endpoint http:ServiceEndpoint echoEP {
+     port:9090
+ };
+
+
 @Description {value:"By default Ballerina assumes that the service is to be exposed via HTTP/1.1."}
-service<http:Service> random  {
+service<http:Service> hello bind echoEP  {
     @Description {value:"All resources are invoked with arguments of server connector and request"}
     sayHello (endpoint conn, http:Request req) {
         http:Response res = new;
         // A util method that can be used to set string payload.
-        res.setStringPayload("Hello, World!");
+        res.setStringPayload(<string> (inverseTransform (10, 1000000, 0.4,math:random())));
+       //  res.setStringPayload("hello");    
         // Sends the response back to the client.
         _ = conn -> respond(res);
     }
 }
+
+
+
+
